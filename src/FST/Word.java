@@ -14,10 +14,16 @@ public class Word extends Object {
 
     public void setWord(String word) {
         // Pre-condition word already has exaclty 5 letters
-        for (int i = 0; i < 5; i++) {
-            this.letters[i]=word.charAt(i);
 
-        }
+            for (int i = 0; i < 5; i++) {
+
+                try {
+                    this.letters[i] = word.charAt(i);
+                } catch (Exception e) {
+                    System.out.println("Invalid input");
+
+                }
+            }
 
     }
 }
